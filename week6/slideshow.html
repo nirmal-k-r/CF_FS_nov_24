@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <body>
+
+        <h1>Slideshow</h1>
+
+        <img id="slideshow" width="400">
+        <br>
+        <button onclick="previous()">Previous</button>
+        <button onclick="next()">Next</button>
+        
+    </body>
+
+    <script>
+        position=0;
+        images=["images/catMasters.jpg","images/catty.jpg","images/mycat.jpg"];
+        
+
+        slideshow=document.getElementById("slideshow");
+
+        slideshow.src=images[position];
+
+       
+       
+        
+        function previous(){
+           position=position-1;
+           if (position<0){
+               position=images.length-1;
+           }
+           slideshow.src=images[position];
+        }
+
+
+        function next(){
+            position=position+1;
+            if (position>=images.length){
+                position=0;
+            }
+            slideshow.src=images[position];
+        }
+
+    </script>
+</html>

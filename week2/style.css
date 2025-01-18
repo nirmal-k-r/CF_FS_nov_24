@@ -1,0 +1,34 @@
+
+/* *{
+    font-family: fantasy;
+} */
+
+body{
+    background-color: burlywood;
+}
+
+/* this is a comment */
+h1,h3{
+    color: #0c760c;
+    font-size: 30px;
+    font-family: fantasy;
+}
+
+
+p{
+    color:rgb(38, 37, 92);
+}
+
+/* defining a class */
+.redText{
+    color: red;
+}
+
+.customImage{
+    width: 400px;
+    border-radius: 20px;                
+}
+
+.underlined{
+    text-decoration: underline;
+}

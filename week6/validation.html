@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validation with Js</title>
+</head>
+    <body>
+
+        <!-- form -->
+
+        <form id="login">
+            <label>Username</label>
+            <input type="text" id="username" required>
+
+            <label>Password</label>
+            <input type="password" id="password" required>
+
+            <input type="submit">
+        </form>
+        
+    </body>
+
+    <script>
+        let loginForm=document.getElementById("login");
+
+        loginForm.addEventListener('submit',function(event){
+            event.preventDefault();
+
+            let username=document.getElementById("username").value;
+            let password=document.getElementById("password").value;
+
+            // console.log(username);
+            // console.log(password);
+            if (username.length<5){
+                alert('Username must be at least 5 characters');
+            }else if(password.length<5){
+                alert('Password must be at least 5 characters');
+            }else{
+                alert('Form submitted');
+            };
+
+
+        });
+
+    </script>
+
+</html>

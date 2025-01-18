@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Game</title>
+
+        <style>
+            .character{
+                position: absolute;
+                left:0px;
+                top:150px;
+            }
+           
+        </style>
+
+
+    </head>
+    <body>
+        <h1>Game</h1>
+
+        <button onclick="start()">Start Game</button>
+        <button id="move">Move</button>
+        <button onclick="stop()">Pause</button>
+        <button onclick="reset()">Reset</button>
+
+        <div id="canvas">
+
+        </div>
+
+        
+       
+   
+  
+    </body>
+
+    <script>
+
+        var position=0;
+        var moving=false;
+
+        canvas=document.getElementById("canvas");
+        
+        function start(){
+            alert('Welcome to walking Jack!');
+
+            character=document.createElement("div");
+            character.id="character";
+            character.className="character";
+
+            spriteImage=document.createElement("img");
+            spriteImage.src="sprite.png";
+            character.appendChild(spriteImage);
+
+            canvas.appendChild(character);
+
+        }
+
+        document.getElementById("move").addEventListener("click",function(){
+            moving=true;
+        });
+
+        //move every second
+        setInterval(function(){
+            if (moving==true){
+                position+=100;
+                textPos=position+"px";
+                document.getElementById("character").style.left=textPos;
+            }
+        },1000);
+
+        function stop(){
+            moving=false;
+        }
+
+        function reset(){
+            position=0;
+            document.getElementById("character").style.left="0px";
+        }
+        
+
+       
+
+
+    </script>
+
+</html>

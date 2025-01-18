@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>DOM</title>
+
+        <style>
+            .redTitle{
+                color:red;
+            }
+
+            .bigText{
+                font-size: 100px;
+            }
+
+        </style>
+
+
+    </head>
+    <body>
+        <h1 id="title">DOM</h1>
+
+        <p id="para">This is some text</p>
+
+
+        <h3>Counter</h3>
+        <label>Value</label> <p id="value">0</p>
+        <button onclick="increment()">+</button>
+        <button onclick="decrement()">-</button>
+
+
+        <p id="results">Results</p>
+
+        <button onclick="window.location.href='https://google.com'">Google</button>
+        
+  
+    </body>
+
+    <script>
+       let title=document.getElementById("title").innerHTML;
+       console.log(title);
+
+        let para=document.querySelector("#para").innerHTML;
+        console.log(para);
+
+        document.getElementById("title").innerHTML="DOM intro";
+
+        document.querySelector("#para").innerHTML="This is a paragraph";
+
+        // document.getElementById("title").className="redTitle";
+        // document.getElementById("title").className="bigText";
+
+        document.querySelector("#title").classList.add("redTitle","bigText");
+
+        document.querySelector("#title").classList.remove("bigText");
+
+        function increment(){
+            let value=document.getElementById("value").innerHTML;
+            let newValue=parseInt(value)+1;
+
+            document.getElementById("value").innerHTML=newValue;
+        }
+
+
+        function decrement(){
+            let value=document.getElementById("value").innerHTML;
+            let newValue=parseInt(value)-1;
+
+            document.getElementById("value").innerHTML=newValue;
+        }
+
+        document.getElementById("results").style.color="blue";
+
+
+    </script>
+
+</html>

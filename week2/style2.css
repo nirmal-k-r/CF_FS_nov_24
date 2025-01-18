@@ -1,0 +1,28 @@
+.roseText{
+    color:#dd16fb;
+}
+
+#strikedText{
+    text-decoration: line-through;
+}
+
+p{
+    color:yellow !important;
+}
+
+/* p{
+    color:blue;
+} */
+
+
+.newcolor{
+    color:red;
+}
+
+#bluecolor{
+    color:blue;
+}
+
+div a{
+    color:red;
+}
